@@ -30,6 +30,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 }
 .page_heading {
   background-color: var(--clr-soft-red);
@@ -75,4 +76,44 @@ main {
   transform: translate(100%);
 }
 /* /.page_heading */
+
+.page_content {
+  background-color: var(--clr-lighter);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 540px;
+}
+
+h1 {
+  color: var(--clr-darker);
+  font-weight: var(--fw-lg);
+  font-size: 1.5rem;
+}
+hr {
+  color: var(--clr-soft-red);
+}
+.content_total {
+  display: flex;
+  justify-content: space-between;
+}
+.total {
+  color: var(--clr-md-dark);
+  font-size: 1rem;
+}
+.total_sum {
+  color: var(--clr-darker);
+  font-weight: var(--fw-lg);
+  font-size: 2rem;
+}
+.month_statistics {
+  font-size: 1rem;
+  color: var(--clr-md-dark);
+  align-self: flex-end;
+}
+.changes_percentage {
+  font-weight: var(--fw-lg);
+  color: var(--clr-darker);
+  text-align: right;
+}
+
 /* #endregion main */
