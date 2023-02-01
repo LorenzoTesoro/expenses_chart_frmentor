@@ -49,7 +49,18 @@
               <h1>Spending - Last 7 days</h1>
             </div>
             <!-- /.content_title -->
-            <div class="content_charts"></div>
+            <div class="content_charts">
+              <div class="day" v-for="day in days">
+                <div
+                  class="bar"
+                  :style="{'height': day.amount * 3 + 'px'}"
+                ></div>
+                <!-- /.bar -->
+                <div class="day_name">{{day.day}}</div>
+                <!-- /.day_name -->
+              </div>
+              <!-- /.day -->
+            </div>
             <!-- /.content_charts -->
             <hr />
             <div class="content_total">
