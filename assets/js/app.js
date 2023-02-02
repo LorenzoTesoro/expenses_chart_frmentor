@@ -42,17 +42,19 @@ createApp({
         "friday",
         "saturday",
       ],
+      currentDay: null,
     };
   },
   methods: {
-    getCurrentDay(day) {
+    getCurrentDay() {
       const date = new Date();
 
-      let currentDay = this.weekday[date.getDay()].slice(0, 3);
+      let day = this.weekday[date.getDay()].slice(0, 3);
 
-      if (currentDay == day) {
-        return currentDay;
-      }
+      this.currentDay = day;
     },
+  },
+  mounted() {
+    this.getCurrentDay();
   },
 }).mount("#app");

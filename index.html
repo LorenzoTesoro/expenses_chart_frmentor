@@ -55,6 +55,7 @@
                 <div
                   class="bar"
                   :style="{'height': day.amount * 3 + 'px'}"
+                  :class="currentDay === day.day ? 'current_day' : 'off_day'"
                 ></div>
                 <!-- /.bar -->
                 <div class="day_name">{{day.day}}</div>
