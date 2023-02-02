@@ -33,6 +33,26 @@ createApp({
           amount: 25.48,
         },
       ],
+      weekday: [
+        "sunday",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+      ],
     };
+  },
+  methods: {
+    getCurrentDay(day) {
+      const date = new Date();
+
+      let currentDay = this.weekday[date.getDay()].slice(0, 3);
+
+      if (currentDay == day) {
+        return currentDay;
+      }
+    },
   },
 }).mount("#app");

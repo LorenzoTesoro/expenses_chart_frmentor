@@ -21,6 +21,10 @@ body {
   min-height: 100vh;
   background-color: var(--clr-cream);
 }
+
+.blue {
+  background-color: blue;
+}
 /* #endregion common rules */
 
 /* #region main */
@@ -103,12 +107,29 @@ h1 {
 .day {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   justify-content: end;
+  position: relative;
 }
 .bar {
   width: 40px;
   background-color: var(--clr-soft-red);
   border-radius: 0.25rem;
+}
+.day_name {
+  color: var(--clr-md-dark);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.total_amount {
+  background-color: var(--clr-darker);
+  color: var(--clr-lighter);
+  padding: 0.3rem;
+  font-size: 0.725rem;
+  border-radius: 0.25rem;
+  font-weight: var(--fw-lg);
+  visibility: hidden;
 }
 
 hr {
@@ -140,6 +161,19 @@ hr {
 }
 
 /* #endregion main */
+
+/* hover effects */
+
+.day:hover .bar {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.day:hover .total_amount {
+  visibility: visible;
+}
+
+/* responsive */
 
 @media screen and (min-width: 768px) {
   main {

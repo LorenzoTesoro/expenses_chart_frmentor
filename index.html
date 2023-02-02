@@ -51,6 +51,7 @@
             <!-- /.content_title -->
             <div class="content_charts">
               <div class="day" v-for="day in days">
+                <div class="total_amount">${{day.amount}}</div>
                 <div
                   class="bar"
                   :style="{'height': day.amount * 3 + 'px'}"
